@@ -55,8 +55,8 @@ RUN mkdir -p /var/log/uwsgi
 RUN chown -R root:root /var/log/uwsgi
 
 #install nano
-RUN yum update
-RUN yum install nano
+#RUN yum update
+#RUN yum install nano
 
 # install django, normally you would remove this step because your project would already
 # be installed in the code/app/ directory
