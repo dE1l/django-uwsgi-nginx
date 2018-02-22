@@ -52,7 +52,7 @@ COPY . /home/docker/code/
 
 # mkdir logs folder for uwsgi
 RUN mkdir -p /var/log/uwsgi
-RUN chown -R user:user /var/log/uwsgi
+RUN chown -R root:root /var/log/uwsgi
 
 #install nano
 RUN pkg update
