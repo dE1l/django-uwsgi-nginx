@@ -50,6 +50,14 @@ RUN pip3 install -r /home/docker/code/app/requirements.txt
 COPY app/ /home/docker/code/app/
 COPY . /home/docker/code/
 
+# mkdir logs folder for uwsgi
+RUN mkdir -p /var/log/uwsgi
+RUN chown -R user:user /var/log/uwsgi
+
+#install nano
+RUN pkg update
+RUN pkg install nano
+
 # install django, normally you would remove this step because your project would already
 # be installed in the code/app/ directory
 #RUN django-admin.py startproject website /home/docker/code/app/
